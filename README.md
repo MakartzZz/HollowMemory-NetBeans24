@@ -6,11 +6,11 @@ Hollow Memory es un juego de memoria desarrollado en JavaFX e inspirado en el un
 
 ### Proyecto original de 2023
 
-El código original se conserva, sin reemplazar, en el archivo:
+El proyecto original se conserva, sin reemplazar, dentro de la carpeta:
 
-`Original 2023/Hollow Memory.zip`
+`Original 2023/Hollow Memory/`
 
-Este ZIP sirve como respaldo histórico del proyecto tal como fue desarrollado en 2023. Es posible que esa versión necesite configuraciones específicas del IDE, del JDK o del SDK de JavaFX para funcionar correctamente.
+Esta carpeta sirve como respaldo histórico del proyecto tal como fue desarrollado en 2023. Es posible que esa versión necesite configuraciones específicas del IDE, del JDK o del SDK de JavaFX para funcionar correctamente. La versión recomendada para ejecutar es la versión reparada ubicada en la raíz del repositorio.
 
 ### Versión actual reparada
 
@@ -66,7 +66,7 @@ mvn clean javafx:run
 
 ```text
 .
-├── Original 2023/       # Respaldo del proyecto original en formato ZIP
+├── Original 2023/       # Respaldo del proyecto original de 2023
 ├── src/main/java/       # Código fuente de la versión reparada
 ├── src/main/resources/  # FXML, estilos, imágenes, sonidos y demás recursos
 ├── nbactions.xml        # Acción de ejecución utilizada por NetBeans
