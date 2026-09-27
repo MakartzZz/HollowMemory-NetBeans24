@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="gameSettingsPane" prefHeight="800.0" prefWidth="1500.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hollowmemory.GameSettingsController">
+   <children>
+      <ImageView fitHeight="302.0" fitWidth="518.0" layoutX="491.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Fondos/GameMode.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="salir" layoutX="711.0" layoutY="736.0" mnemonicParsing="false" onAction="#BackToStart" style="-fx-background-color: gray;" text="Atras" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="21.0" />
+         </font>
+         <effect>
+            <InnerShadow choke="0.36" height="75.39" radius="41.7275" width="93.52">
+               <input>
+                  <DropShadow />
+               </input>
+            </InnerShadow>
+         </effect>
+      </Button>
+      <RadioButton fx:id="easyMode" layoutX="198.0" layoutY="328.0" mnemonicParsing="false" onAction="#difficulty" prefHeight="38.0" prefWidth="143.0" text="Facil" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="22.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+         <toggleGroup>
+            <ToggleGroup fx:id="dificultGroup" />
+         </toggleGroup>
+         <tooltip>
+            <Tooltip text=" *Facil*&#10;- Parejas: 4&#10;- PC: Mediocre.&#10;- Ganador: Mayor cantidad de puntos." />
+         </tooltip>
+      </RadioButton>
+      <RadioButton fx:id="normalMode" layoutX="198.0" layoutY="387.0" mnemonicParsing="false" onAction="#difficulty" prefHeight="38.0" prefWidth="143.0" selected="true" text="Normal" textFill="WHITE" toggleGroup="$dificultGroup">
+         <font>
+            <Font name="Times New Roman" size="22.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+         <tooltip>
+            <Tooltip text=" *Normal*&#10;- Parejas: 8&#10;- PC: Normal.  &#10;- Zote's Blessing.&#10;- Ganador: Mayor cantidad de puntos." />
+         </tooltip>
+      </RadioButton>
+      <RadioButton fx:id="hardMode" layoutX="198.0" layoutY="444.0" mnemonicParsing="false" onAction="#difficulty" prefHeight="38.0" prefWidth="106.0" text="Dificil" textFill="WHITE" toggleGroup="$dificultGroup">
+         <font>
+            <Font name="Times New Roman" size="22.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+         <tooltip>
+            <Tooltip text=" *Dificil*&#10;- Parejas: 8 &#10;- PC: Inteligente.&#10;- Modos de juegos alternativos.&#10;- Limites de tiempo. &#10;- Ganador: Mayor cantidad de puntos." />
+         </tooltip>
+      </RadioButton>
+      <ImageView fitHeight="96.0" fitWidth="309.0" layoutX="115.0" layoutY="214.0">
+         <image>
+            <Image url="@../SettingsLetters/Dificultad.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="162.0" fitWidth="571.0" layoutX="464.0">
+         <image>
+            <Image url="@../SettingsLetters/Modo%20de%20Juego.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="96.0" fitWidth="309.0" layoutX="1052.0" layoutY="214.0">
+         <image>
+            <Image url="@../SettingsLetters/Jugadores.png" />
+         </image>
+      </ImageView>
+      <RadioButton fx:id="playerVSpc" layoutX="1119.0" layoutY="351.0" mnemonicParsing="false" onAction="#Players" text="JUGADOR vs PC" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="22.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+         <toggleGroup>
+            <ToggleGroup fx:id="playersGroup" />
+         </toggleGroup>
+         <tooltip>
+            <Tooltip text="*Duelo contra Radiance*&#10;Si no tienes contra quien jugar&#10;enfrentate contra Radiance y evita&#10;que siga infectado y controlando las&#10;criaturas de este mundo.&#10;" />
+         </tooltip>
+      </RadioButton>
+      <RadioButton fx:id="playerVSplayer" layoutX="1119.0" layoutY="450.0" mnemonicParsing="false" onAction="#Players" selected="true" text="JUGADOR vs JUGADOR" textFill="WHITE" toggleGroup="$playersGroup">
+         <font>
+            <Font name="Times New Roman" size="22.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+         <tooltip>
+            <Tooltip text="Duelo por turnos.&#10;Perfecto para jugar con amigos &#10;y pasar el rato." />
+         </tooltip>
+      </RadioButton>
+      <TextField fx:id="playerOne" alignment="CENTER" layoutX="487.0" layoutY="450.0" promptText="Jugador 1" style="-fx-background-color: #565050;">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <DropShadow height="58.43" radius="28.715" width="58.43">
+               <color>
+                  <Color red="0.501960813999176" green="0.501960813999176" blue="0.501960813999176" />
+               </color>
+            </DropShadow>
+         </effect>
+      </TextField>
+      <TextField fx:id="playerTwo" alignment="CENTER" layoutX="841.0" layoutY="450.0" promptText="Jugador 2" style="-fx-background-color: #565050;">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <DropShadow height="58.43" radius="28.715" width="58.43">
+               <color>
+                  <Color red="0.501960813999176" green="0.501960813999176" blue="0.501960813999176" />
+               </color>
+            </DropShadow>
+         </effect>
+      </TextField>
+      <Label layoutX="554.0" layoutY="394.0" text="J.1" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="35.0" />
+         </font>
+         <effect>
+            <DropShadow height="47.37" radius="23.185" width="47.37">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label layoutX="908.0" layoutY="394.0" text="J.2" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="35.0" />
+         </font>
+         <effect>
+            <DropShadow height="58.43" radius="27.545" width="53.75">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <ImageView fitHeight="39.0" fitWidth="60.0" layoutX="430.0" layoutY="444.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Extras/Izquierda.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="60.0" layoutX="787.0" layoutY="444.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Extras/Izquierda.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="60.0" layoutX="673.0" layoutY="444.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Extras/Derecha.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="60.0" layoutX="1028.0" layoutY="444.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Extras/Derecha.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="IniciarJuego" layoutX="696.0" layoutY="682.0" mnemonicParsing="false" onAction="#Initialize" prefHeight="38.0" prefWidth="106.0" style="-fx-background-color: gray;" text="Iniciar" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="21.0" />
+         </font>
+         <effect>
+            <InnerShadow choke="0.36" height="75.39" radius="41.7275" width="93.52">
+               <input>
+                  <DropShadow />
+               </input>
+            </InnerShadow>
+         </effect>
+      </Button>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="649.0" layoutY="519.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../SettingsLetters/Extras_.png" />
+         </image>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ImageView>
+      <Label layoutX="641.0" layoutY="585.0" prefHeight="26.0" prefWidth="218.0" text="Duración de la partida: " textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="22.0" />
+         </font>
+         <effect>
+            <DropShadow height="47.37" radius="23.185" width="47.37">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <TextField fx:id="txfl_GameTime" alignment="CENTER" layoutX="698.0" layoutY="618.0" prefHeight="30.0" prefWidth="100.0" promptText="min" style="-fx-background-color: #565050;">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <DropShadow height="58.43" radius="28.715" width="58.43">
+               <color>
+                  <Color red="0.501960813999176" green="0.501960813999176" blue="0.501960813999176" />
+               </color>
+            </DropShadow>
+         </effect>
+      </TextField>
+      <RadioButton fx:id="blessing" layoutX="337.0" layoutY="583.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#UseBlessing" text="Zote's Blessing" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="22.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+         <tooltip>
+            <Tooltip text="*Bendicion de Zote*&#10;Quien no querria la bendicion del &quot;Todopoderoso Zote&quot;?&#10;Te permite ganar un punto extra cada que haciertas dos veces seguidas." textAlignment="RIGHT">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Tooltip>
+         </tooltip>
+      </RadioButton>
+      <ImageView fitHeight="39.0" fitWidth="60.0" layoutX="1172.0" layoutY="579.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Extras/Derecha.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="39.0" fitWidth="60.0" layoutX="284.0" layoutY="578.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Extras/Izquierda.png" />
+         </image>
+      </ImageView>
+      <RadioButton fx:id="malediction" layoutX="943.0" layoutY="583.0" mnemonicParsing="false" onAction="#UseMalediction" text="Radiance's Infection" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="22.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+         <tooltip>
+            <Tooltip text="*Infección de Radiance* &#10;El culpable de todas las infecciones mediante sueños.&#10;Pierdes un punto al equivocarte.">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Tooltip>
+         </tooltip>
+      </RadioButton>
+      <Label fx:id="warning" alignment="CENTER" layoutX="584.0" layoutY="656.0" prefHeight="14.0" prefWidth="328.0" textFill="RED">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

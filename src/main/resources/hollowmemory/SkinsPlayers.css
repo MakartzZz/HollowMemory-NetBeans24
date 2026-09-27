@@ -1,0 +1,26 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 20 abr 2023, 17:59:56
+    Author     : david
+*/
+
+.Hornet{
+  -fx-background-color: #662e2e;
+  -fx-background-image: url("/Skins/HornetPlaying.png");
+}
+
+.Hornet:disabled{
+   -fx-background-image: url("/Skins/HornetNormal.png");
+}
+
+.Radiant{
+  -fx-background-color: #b4a75e;
+  -fx-background-image: url("/Skins/RadiantPlaying.png");
+}
+
+.Radiant:disabled{
+   -fx-background-image: url("/Skins/RadiantNormal.png");
+}

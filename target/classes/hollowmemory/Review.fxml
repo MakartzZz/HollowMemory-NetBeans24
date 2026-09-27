@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1500.0" style="-fx-background-color: #1A1A1A;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hollowmemory.ReviewController">
+   <children>
+      <GridPane fx:id="GridPaneReview" layoutX="161.0" layoutY="97.0" prefHeight="683.0" prefWidth="1182.0">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <Label layoutX="624.0" layoutY="23.0" text="Modo revision" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="43.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Button fx:id="close" layoutX="37.0" layoutY="714.0" mnemonicParsing="false" onAction="#CloseReview" prefHeight="50.0" prefWidth="123.0" style="-fx-background-color: #4A3A4A;" text="Cerrar" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="26.0" />
+         </font>
+      </Button>
+      <Button fx:id="show" layoutX="37.0" layoutY="644.0" mnemonicParsing="false" onAction="#RunReview" prefHeight="50.0" prefWidth="123.0" style="-fx-background-color: #4A3A4A;" text="Cargar Info." textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="19.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

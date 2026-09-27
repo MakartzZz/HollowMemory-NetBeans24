@@ -1,0 +1,14 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 1 may 2023, 21:39:43
+    Author     : david
+*/
+
+.Label{
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 35px;
+    -fx-text-fill: #ffffff;
+}

@@ -1,0 +1,15 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 14 abr 2023, 16:06:43
+    Author     : david
+*/
+
+.options{
+    -fx-background-color: #382e2e;
+    -fx-background-radius: 50;
+     -fx-border-color: #4b4444;
+     -fx-border-radius: 50;
+}
